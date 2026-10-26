@@ -24,5 +24,6 @@ Comandos previstos desde la raíz (aún no existe `package.json`):
 - Clave del administrador y número de WhatsApp en variables de entorno; documentarlas en `.env.example` sin secretos reales.
 - Cada regla de negocio empieza con una prueba que falla; `npm test` debe pasar antes de cerrar una feature.
 - Criterios de éxito comprobables desde la app por una persona no técnica.
+- Cuando te pida "cerrar la feature", ejecuta: verificar el working tree y commitear los cambios pendientes; correr tests (parar si fallan); hacer checkout de `main`; fusionar la rama de la feature con `--no-ff` y el mensaje "Merge feature NNN: <nombre>"; borrar la rama local y la rama remota correspondiente; subir `main` al remoto; y mostrar `git log --oneline --graph -10`. Si el push falla, informar el error y dejar claro qué pasos sí se completaron.
 
 Las reglas de producto viven en .specify/memory/constitution.md y el estado del producto en specs/README.md
